@@ -18,7 +18,8 @@ export const HomeScreenTabs = TabNavigator({
 export const PrimaryNav =StackNavigator({
 
       LoginScreen:{screen:Login,headerMode:'none',navigationOptions: { title: 'Login', header:false }},
-      HomeScreen:{screen:HomeScreenTabs}
+      HomeScreen:{screen:HomeScreenTabs},
+      ProfileScreen:{screen:Profile}
 
 },{
 
@@ -66,6 +67,9 @@ export const navReducer = (state , action) => {
         case 'HomeScreen':
             nextState = PrimaryNav.router.getStateForAction(NavigationActions.navigate({routeName:'HomeScreen'}),state);
             break;
+        case 'ProfileScreen':
+              nextState = PrimaryNav.router.getStateForAction(NavigationActions.navigate({routeName:'ProfileScreen'}),state);
+              break;
         default:
             nextState =PrimaryNav.router.getStateForAction(action, state);
         break;
