@@ -10,7 +10,7 @@ const ApplicationStyles = {
     centercontainer:{
       flex: 1,
         justifyContent: 'center',
-        backgroundColor: Colors.bloodOrange
+        backgroundColor: Colors.white
     },
     mainContainer: {
       flex: 1,
